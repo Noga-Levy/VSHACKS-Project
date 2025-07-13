@@ -111,13 +111,13 @@ function capitalize(text){
   if (newText.includes(" ")) {
     for (let i = 0; i < newText.length; i++) {
       if (newText[i] === " ") {
-        newText = newText.slice(0, i) + newText[i + 1].toUpperCase() + newText.slice(i + 1);
+        newText = newText.slice(0, i + 1) + newText[i + 1].toUpperCase() + newText.slice(i + 2);
       }
     }
   }
   return newText
 }
-  
+
 questionEl.innerHTML = `
   <span style="display: block; text-align: center; font-size: 72px; font-weight: bold; color: black;">
     Which has more ${nutrientName}?
