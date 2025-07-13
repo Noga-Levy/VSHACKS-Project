@@ -112,6 +112,9 @@ function capitalize(text){
     for (let i = 0; i < newText.length; i++) {
       if (newText[i] === " ") {
         newText[i + 1] = newText[i + 1].toUpperCase()
+      }
+    }
+  }
   return newText
 }
   
