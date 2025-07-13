@@ -106,18 +106,14 @@ function generateQuestion() {
   const unit = getUnit(nutrientName);
 
 
-function capitalize(text){
-  let newText = `${text[0].toUpperCase()}${text.slice(1)}`;
-  if (newText.includes(" ")) {
-    for (let i = 0; i < newText.length; i++) {
-      if (newText[i] === " ") {
-        newText = newText.slice(0, i + 1) + newText[i + 1].toUpperCase() + newText.slice(i + 2);
-      }
-    }
-  }
-  return newText
+function capitalize(text) {
+  return text
+    .split(" ")
+    .map(word => word[0]?.toUpperCase() + word.slice(1))
+    .join(" ");
 }
 
+  
 questionEl.innerHTML = `
   <span style="display: block; text-align: center; font-size: 72px; font-weight: bold; color: black;">
     Which has more ${nutrientName}?
