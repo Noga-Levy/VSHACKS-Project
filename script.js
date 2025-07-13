@@ -107,7 +107,7 @@ function generateQuestion() {
 
 
 function capitalize(text){
-  let newText = `${str[0].toUpperCase()}${str.slice(1)}`;
+  let newText = `${text[0].toUpperCase()}${text.slice(1)}`;
   if (newText.includes(" ")) {
     for (let i = 0; i < newText.length; i++) {
       if (newText[i] === " ") {
