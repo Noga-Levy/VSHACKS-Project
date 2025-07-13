@@ -111,7 +111,7 @@ function capitalize(text){
   if (newText.includes(" ")) {
     for (let i = 0; i < newText.length; i++) {
       if (newText[i] === " ") {
-        newText = newText.slice(0, i) + newText[i].toUpperCase() + newText.slice(i + 1);
+        newText = newText.slice(0, i) + newText[i + 1].toUpperCase() + newText.slice(i + 1);
       }
     }
   }
