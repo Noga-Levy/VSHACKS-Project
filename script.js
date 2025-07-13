@@ -105,16 +105,26 @@ function generateQuestion() {
   const amount2 = parseAmount(entry2[colIndex]);
   const unit = getUnit(nutrientName);
 
+
+function capitalize(text){
+  let newText = `${str[0].toUpperCase()}${str.slice(1)}`;
+  if (newText.includes(" ")) {
+    for (let i = 0; i < newText.length; i++) {
+      if (newText[i] === " ") {
+        newText[i + 1] = newText[i + 1].toUpperCase()
+  return newText
+}
+  
 questionEl.innerHTML = `
   <span style="display: block; text-align: center; font-size: 72px; font-weight: bold; color: black;">
     Which has more ${nutrientName}?
   </span>
   <br>
   <span style="display: block; text-align: center; font-size: 32px; font-weight: bold; color: black;">
-    ${entry1[0]} (Quantity: ${entry1[1]})
+    ${capitalize(entry1[0])} (Quantity: ${entry1[1]})
   </span>
   <span style="display: block; text-align: center; font-size: 32px; font-weight: bold; color: black;">
-    ${entry2[0]} (Quantity: ${entry2[1]})
+    ${capitalize(entry2[0])} (Quantity: ${entry2[1]})
   </span>
 `;
 
